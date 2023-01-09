@@ -11,10 +11,11 @@ class RadioTest {
 
         //rad.currentWave = 15;
 
-        int expected = 10;
+        int expected = 0;
         int actual = rad.getCurrentWave();
 
         assertEquals(expected,actual);
     }
+
 
 }

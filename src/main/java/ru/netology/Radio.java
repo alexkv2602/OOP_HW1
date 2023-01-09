@@ -6,11 +6,16 @@ public class Radio {
     public int getCurrentWave() {
         return currentWave;
     }
+    public void increaseWave() {
+        if (currentWave < 10) {
+            currentVolume = currentVolume + 1;
+        }
+    }
+
 
     public void setCurrentWave(int newCurrentWave){
         currentWave = newCurrentWave;
     }
-
 
 
     private int currentVolume;
@@ -18,6 +23,13 @@ public class Radio {
     public int getCurrentVolume() {
         return currentVolume;
     }
-    public void setCurrentVolume;
+
+    public void increaseVolume() {
+        if (currentVolume < 10) {
+            currentVolume = currentVolume + 1;
+        }
+    }
+
+    public int setCurrentVolume;
 
 }
