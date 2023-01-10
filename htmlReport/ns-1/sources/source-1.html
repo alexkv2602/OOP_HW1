@@ -1,0 +1,169 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > Radio</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">ru.netology</a>
+</div>
+
+<h1>Coverage Summary for Class: Radio (ru.netology)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Radio</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (9/9)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (21/21)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package ru.netology;
+&nbsp;
+<b class="fc">&nbsp;public class Radio {</b>
+&nbsp;    private int currentWave;
+&nbsp;
+&nbsp;    public void next() {
+<b class="fc">&nbsp;        if (currentWave != 9) {</b>
+<b class="fc">&nbsp;            currentWave++;</b>
+&nbsp;        } else {
+<b class="fc">&nbsp;            currentWave = 0;</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;
+&nbsp;    public void prev() {
+<b class="fc">&nbsp;        if (currentWave != 0) {</b>
+<b class="fc">&nbsp;            currentWave--;</b>
+&nbsp;        } else {
+<b class="fc">&nbsp;            currentWave = 9;</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;
+&nbsp;    public int getCurrentWave() {
+<b class="fc">&nbsp;        return currentWave;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setCurrentWave(int currentWave) {
+<b class="fc">&nbsp;        if (currentWave &lt; 0) {</b>
+&nbsp;            return;
+&nbsp;        }
+<b class="fc">&nbsp;        if (currentWave &gt; 9) {</b>
+&nbsp;            return;
+&nbsp;        }
+<b class="fc">&nbsp;        this.currentWave = currentWave;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    private int currentVolume;
+&nbsp;
+&nbsp;    public int getCurrentVolume() {
+<b class="fc">&nbsp;        return currentVolume;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;
+&nbsp;    public void setCurrentVolume(int currentVolume) {
+<b class="fc">&nbsp;        if (currentVolume &lt; 0) {</b>
+&nbsp;            return;
+&nbsp;        }
+<b class="fc">&nbsp;        if (currentVolume &gt; 10) {</b>
+&nbsp;            return;
+&nbsp;        }
+<b class="fc">&nbsp;        this.currentVolume = currentVolume;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void increaseVolume() {
+<b class="fc">&nbsp;        if (currentVolume != 10) {</b>
+<b class="fc">&nbsp;            currentVolume++;</b>
+&nbsp;        } else {
+<b class="fc">&nbsp;            currentVolume = 10;</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;        public void decreaseVolume() {
+<b class="fc">&nbsp;            if (currentVolume != 0) {</b>
+<b class="fc">&nbsp;                currentVolume--;</b>
+&nbsp;            } else
+<b class="fc">&nbsp;                currentVolume = 0;</b>
+&nbsp;        }
+&nbsp;    }
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-01-10 13:05</div>
+</div>
+</body>
+</html>
