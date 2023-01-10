@@ -12,6 +12,22 @@ class RadioTest {
         int expected = 8;
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    public void testSetIncorrectStationOverLimit() {
+        Radio radio = new Radio();
+        radio.setCurrentWave(10);
+        int actual = radio.getCurrentWave();
+        int expected = 0;
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void testSetIncorrectStationUnderLimit() {
+        Radio radio = new Radio();
+        radio.setCurrentWave(-1);
+        int actual = radio.getCurrentWave();
+        int expected = 0;
+        Assertions.assertEquals(expected, actual);
+    }
 
     @Test
     public void testSetNext() {
@@ -90,6 +106,22 @@ class RadioTest {
         Radio radio = new Radio();
         radio.setCurrentVolume(0);
         radio.decreaseVolume();
+        int actual = radio.getCurrentVolume();
+        int expected = 0;
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void testSetIncorrectVolumeOverLimit() {
+        Radio radio = new Radio();
+        radio.setCurrentVolume(11);
+        int actual = radio.getCurrentVolume();
+        int expected = 0;
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void testSetIncorrectVolumeUnderLimit() {
+        Radio radio = new Radio();
+        radio.setCurrentVolume(-1);
         int actual = radio.getCurrentVolume();
         int expected = 0;
         Assertions.assertEquals(expected, actual);
